@@ -5,9 +5,14 @@ const canvas = document.getElementById('myChart');
 const places = ['Augarten', 'Paris', 'Jakominiplatz', 'Wohnzimmer', 'Kino'];
 const votes = [12, 9, 5, 4, 3];
 
+datasets: [
+ {label: 'Students', data: [12, 9, 5, 4, 3]},
+ {label: 'Teachers', data: [8, 6, 7, 3, 2]}
+]
+
 // Create a new chart: new Chart(where, configuration)
 new Chart(canvas, {
-  type: 'pie',              // try: 'line', 'pie', 'doughnut'
+  type: 'bar',              // try: 'line', 'pie', 'doughnut'
   data: {
     labels: places,         // labels on the x-axis
     datasets: [{
